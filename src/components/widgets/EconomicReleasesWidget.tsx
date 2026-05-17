@@ -6,8 +6,8 @@ import { economicReleases } from '../../data/mockData';
 export const EconomicReleasesWidget = () => {
   return (
     <Card>
-      <CardHeader className="pb-2">
-        <CardTitle className="text-amber text-lg">Economic Releases</CardTitle>
+      <CardHeader className="pb-2 border-b border-border bg-slate-50/50">
+        <CardTitle className="text-primary text-lg">Economic Releases</CardTitle>
       </CardHeader>
       <CardContent>
         <Table>

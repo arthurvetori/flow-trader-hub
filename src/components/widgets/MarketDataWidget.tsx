@@ -48,8 +48,8 @@ export const MarketDataWidget = () => {
 
   return (
     <Card className="flex flex-col gap-4">
-      <CardHeader className="pb-2">
-        <CardTitle className="text-amber text-lg">Market Data (Live)</CardTitle>
+      <CardHeader className="pb-2 border-b border-border bg-slate-50/50">
+        <CardTitle className="text-primary text-lg">Market Data (Live)</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-6">
         <div>
@@ -70,10 +70,10 @@ export const MarketDataWidget = () => {
                   <TableCell className={`text-right font-mono ${tickActive[fx.pair] === 'up' ? 'flash-green' : tickActive[fx.pair] === 'down' ? 'flash-red' : ''}`}>
                     {fx.last.toFixed(4)}
                   </TableCell>
-                  <TableCell className={`text-right font-mono ${fx.change >= 0 ? 'text-green' : 'text-red'}`}>
+                  <TableCell className={`text-right font-mono ${fx.change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                     {fx.change > 0 ? '+' : ''}{fx.change.toFixed(4)}
                   </TableCell>
-                  <TableCell className={`text-right font-mono ${fx.changePct >= 0 ? 'text-green' : 'text-red'}`}>
+                  <TableCell className={`text-right font-mono ${fx.changePct >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                     {fx.changePct > 0 ? '+' : ''}{fx.changePct.toFixed(2)}%
                   </TableCell>
                 </TableRow>
@@ -100,10 +100,10 @@ export const MarketDataWidget = () => {
                   <TableCell className={`text-right font-mono ${tickActive[c.symbol] === 'up' ? 'flash-green' : tickActive[c.symbol] === 'down' ? 'flash-red' : ''}`}>
                     {c.last.toFixed(2)}
                   </TableCell>
-                  <TableCell className={`text-right font-mono ${c.change >= 0 ? 'text-green' : 'text-red'}`}>
+                  <TableCell className={`text-right font-mono ${c.change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                     {c.change > 0 ? '+' : ''}{c.change.toFixed(2)}
                   </TableCell>
-                  <TableCell className={`text-right font-mono ${c.changePct >= 0 ? 'text-green' : 'text-red'}`}>
+                  <TableCell className={`text-right font-mono ${c.changePct >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                     {c.changePct > 0 ? '+' : ''}{c.changePct.toFixed(2)}%
                   </TableCell>
                 </TableRow>

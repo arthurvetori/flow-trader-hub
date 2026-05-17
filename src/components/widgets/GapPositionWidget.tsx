@@ -6,8 +6,8 @@ import { gapRisks } from '../../data/mockData';
 export const GapPositionWidget = () => {
   return (
     <Card className="flex flex-col gap-4 h-full">
-      <CardHeader className="pb-0">
-        <CardTitle className="text-amber text-lg">Gap Position Management</CardTitle>
+      <CardHeader className="pb-2 border-b border-border bg-slate-50/50">
+        <CardTitle className="text-primary text-lg">Gap Position Management</CardTitle>
       </CardHeader>
       <CardContent className="flex-1 flex flex-col gap-6 pt-4">
         <div className="flex-1 min-h-[200px]">
@@ -18,11 +18,11 @@ export const GapPositionWidget = () => {
               <XAxis dataKey="riskFactor" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }} angle={-20} textAnchor="end" />
               <YAxis stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }} />
               <Tooltip 
-                contentStyle={{ backgroundColor: 'hsl(var(--card))', borderColor: 'hsl(var(--border))', color: 'hsl(var(--foreground))', borderRadius: '0.5rem' }}
-                cursor={{ fill: 'hsl(var(--muted))' }}
+                contentStyle={{ backgroundColor: '#ffffff', borderColor: '#e2e8f0', color: '#0f172a', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
+                cursor={{ fill: 'rgba(226, 232, 240, 0.5)' }}
               />
               <ReferenceLine y={0} stroke="hsl(var(--muted-foreground))" />
-              <Bar dataKey="dv01" fill="#f87171" name="DV01" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="dv01" fill="#dc2626" name="DV01" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -42,9 +42,9 @@ export const GapPositionWidget = () => {
               {gapRisks.map((risk, i) => (
                 <TableRow key={i}>
                   <TableCell>{risk.riskFactor}</TableCell>
-                  <TableCell className="text-right font-bold text-red-400">{risk.dv01.toFixed(2)}</TableCell>
+                  <TableCell className="text-right font-bold text-red-600">{risk.dv01.toFixed(2)}</TableCell>
                   <TableCell className="text-right">{risk.limit.toFixed(2)}</TableCell>
-                  <TableCell className={`text-right ${risk.util > 80 ? 'text-red-400' : 'text-amber'}`}>
+                  <TableCell className={`text-right ${risk.util > 80 ? 'text-red-600' : 'text-amber'}`}>
                     {risk.util.toFixed(1)}%
                   </TableCell>
                 </TableRow>

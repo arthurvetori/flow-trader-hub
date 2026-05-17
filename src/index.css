@@ -1,9 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
@@ -23,10 +46,9 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
-    --radius: 0.5rem;
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
@@ -46,15 +68,15 @@
 }
 
 @keyframes flashGreen {
-  0% { color: #4ade80; text-shadow: 0 0 8px rgba(74, 222, 128, 0.5); }
-  100% { color: inherit; text-shadow: none; }
+  0% { color: #16a34a; background-color: rgba(22, 163, 74, 0.1); }
+  100% { color: inherit; background-color: transparent; }
 }
 
 @keyframes flashRed {
-  0% { color: #f87171; text-shadow: 0 0 8px rgba(248, 113, 113, 0.5); }
-  100% { color: inherit; text-shadow: none; }
+  0% { color: #dc2626; background-color: rgba(220, 38, 38, 0.1); }
+  100% { color: inherit; background-color: transparent; }
 }
 
-.text-green { color: #4ade80; }
-.text-red { color: #f87171; }
-.text-amber { color: #fbbf24; }
+.text-green { color: #16a34a; }
+.text-red { color: #dc2626; }
+.text-amber { color: #2563eb; } /* Blue for primary accents in light theme */

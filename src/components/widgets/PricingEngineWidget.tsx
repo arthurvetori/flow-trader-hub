@@ -22,8 +22,8 @@ export const PricingEngineWidget = () => {
 
   return (
     <Card>
-      <CardHeader className="pb-2">
-        <CardTitle className="text-amber text-lg">LTN Pricer (Mock)</CardTitle>
+      <CardHeader className="pb-2 border-b border-border bg-slate-50/50">
+        <CardTitle className="text-primary text-lg">LTN Pricer (Mock)</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-2 gap-4 mb-6 mt-2">
@@ -60,11 +60,11 @@ export const PricingEngineWidget = () => {
         <div className="bg-muted/50 rounded-lg p-4 flex flex-col gap-3 border border-border">
           <div className="flex justify-between items-center">
             <span className="text-sm text-muted-foreground font-medium">Unit Price (PU)</span>
-            <span className="text-amber font-mono font-bold text-lg">{calculatePU()}</span>
+            <span className="text-blue-600 font-mono font-bold text-lg">{calculatePU()}</span>
           </div>
           <div className="flex justify-between items-center">
             <span className="text-sm text-muted-foreground font-medium">Mark-to-Market</span>
-            <span className="text-green-400 font-mono font-bold text-lg">R$ {calculateMtM()}</span>
+            <span className="text-green-600 font-mono font-bold text-lg">R$ {calculateMtM()}</span>
           </div>
         </div>
       </CardContent>

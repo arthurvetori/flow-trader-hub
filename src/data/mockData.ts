@@ -59,3 +59,21 @@ export const historicalProduction = [
   { month: 'May', cdb: 3.8, debentures: 2.5, cpr: 1.5, rl: 0.9 },
   { month: 'Jun', cdb: 4.2, debentures: 2.9, cpr: 1.8, rl: 1.1 },
 ];
+
+export const newsFeed = [
+  { id: 1, time: '10:45', headline: 'Fed Signals Potential Rate Cut in Q3', source: 'Reuters' },
+  { id: 2, time: '10:30', headline: 'Brazil Retail Sales Exceed Expectations', source: 'Bloomberg' },
+  { id: 3, time: '10:15', headline: 'Oil Prices Surge Amid Middle East Tensions', source: 'WSJ' },
+  { id: 4, time: '09:50', headline: 'Treasury Yields Stabilize Following CPI Print', source: 'FT' },
+  { id: 5, time: '09:30', headline: 'B3 Trading Volume Hits Monthly High', source: 'Valor' },
+  { id: 6, time: '09:00', headline: 'US Tech Stocks Rally on AI Chip Announcements', source: 'CNBC' },
+];
+
+export const portfolioSummary = {
+  totalAUM: 12500000000,
+  dailyPnL: 4500000,
+  dailyReturn: 0.036,
+  ytdReturn: 12.4,
+  activePositions: 342
+};
+
